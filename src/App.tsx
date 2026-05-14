@@ -31,7 +31,7 @@ const Navbar = () => {
             <img 
               src="/logo.png" 
               alt="AH shop" 
-              className="h-8 w-auto object-contain brightness-0 invert"
+              className="h-16 w-auto object-contain brightness-0 invert"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-street: "Permanent Marker", cursive;
+
+  --color-luxury-black: #080808;
+  --color-luxury-charcoal: #121212;
+  --color-luxury-grey: #1A1A1A;
+  --color-luxury-cream: #FFFFFF;
+  --color-luxury-gold: #FF6B00; /* Streetwear orange accent */
+
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-black text-white antialiased overflow-x-hidden uppercase;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight uppercase;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+}
+
+.glass-morphism {
+  @apply backdrop-blur-md bg-black/80 border-b border-white/5;
+}
+
+.text-reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.brush-text {
+  @apply font-street tracking-wider;
+}
+
+.luxury-card-hover {
+  @apply transition-all duration-500 ease-out hover:brightness-110;
+}
+
+.product-image-container {
+  @apply relative aspect-[3/4] overflow-hidden bg-[#151515];
+}

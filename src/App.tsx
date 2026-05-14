@@ -6,19 +6,6 @@ import { Product } from './types';
 
 // --- Global Components ---
 
-const AnnouncementBar = () => (
-  <div className="bg-black text-[9px] sm:text-[10px] py-1.5 px-4 flex justify-center items-center tracking-widest font-bold border-b border-white/5 space-x-8">
-    <div className="flex items-center space-x-2">
-      <Globe className="w-3 h-3" />
-      <span>FREE SHIPPING ON ORDERS OVER $100</span>
-    </div>
-    <div className="h-3 w-[1px] bg-white/20" />
-    <div className="flex items-center space-x-2">
-      <span>30-DAY RETURNS & EASY EXCHANGES</span>
-    </div>
-  </div>
-);
-
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('HOME');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -262,7 +249,6 @@ const Footer = () => (
 export default function App() {
   return (
     <div className="min-h-screen bg-black">
-      <AnnouncementBar />
       <Navbar />
       <Hero />
       <FeaturesRow />

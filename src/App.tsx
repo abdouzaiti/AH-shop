@@ -7,7 +7,7 @@ import { Product } from './types';
 // --- Global Components ---
 
 const AnnouncementBar = () => (
-  <div className="bg-black text-[9px] sm:text-[10px] py-4 px-4 flex justify-center items-center tracking-widest font-bold border-b border-white/5 space-x-8">
+  <div className="bg-black text-[9px] sm:text-[10px] py-1.5 px-4 flex justify-center items-center tracking-widest font-bold border-b border-white/5 space-x-8">
     <div className="flex items-center space-x-2">
       <Globe className="w-3 h-3" />
       <span>FREE SHIPPING ON ORDERS OVER $100</span>
@@ -23,7 +23,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('HOME');
 
   return (
-    <nav className="bg-luxury-black sticky top-0 z-50 w-full px-6 py-6 border-b border-white/5">
+    <nav className="bg-luxury-black sticky top-0 z-50 w-full px-6 py-4 border-b border-white/5">
       <div className="max-w-[1600px] mx-auto flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex-1">
@@ -31,7 +31,7 @@ const Navbar = () => {
             <img 
               src="/logo.png" 
               alt="AH shop" 
-              className="h-16 w-auto object-contain brightness-0 invert"
+              className="h-12 w-auto object-contain brightness-0 invert"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -95,7 +95,7 @@ const Hero = () => (
         className="max-w-2xl"
       >
         <span className="text-[11px] font-black tracking-[0.4em] mb-6 block text-white/90">STREETWEAR COLLECTION</span>
-        <h2 className="text-8xl md:text-[11rem] mb-6 brush-text leading-[0.8] text-white">
+        <h2 className="text-7xl md:text-[9rem] mb-6 brush-text leading-[0.8] text-white">
           URBAN<br />ESSENTIALS
         </h2>
         <p className="text-sm md:text-base font-bold tracking-[0.2em] mb-12 text-white/80 max-w-md">
